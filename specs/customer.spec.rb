@@ -3,11 +3,16 @@ require('minitest/reporters')
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 require_relative('../customer')
 require_relative('../drinks')
+require_relative('../pub')
 
 class CustomerTest < Minitest::Test
 
   def setup
+    @drink1 = Drinks.new("Beer", 4.50)
+    @drink2 = Drinks.new("Rum", 3.50)
     @drink3 = Drinks.new("Wine", 7.00)
+    @drinks_in_pub = [@drink1, @drink2, @drink3]
+    @pub1 = Pub.new("George's Arms", 150, @drinks_in_pub)
     @customer_1 = Customer.new("Jim", 50, 29)
   end
 

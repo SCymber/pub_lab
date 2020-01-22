@@ -17,10 +17,13 @@ end
   end
 
 
-  #give drink to customer
+  def give_drink_to_customer
+    return drinks_in_pub.pop()
+  end
+
 
   #check customer age
 
-  
+
 
 end
