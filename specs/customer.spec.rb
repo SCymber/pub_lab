@@ -36,9 +36,20 @@ class CustomerTest < Minitest::Test
 
   def test_buy_a_drink
     @customer_1.buy_a_drink(@pub1)
+    assert_equal(14, @customer_1.drunkenness)
     assert_equal(1, @customer_1.drinks_bought.count)
     assert_equal(157, @pub1.cash_in_till())
     assert_equal(43, @customer_1.money_in_wallet())
   end
+
+
+  ##################EXTENSIONS########################
+
+  def test_level_of_drunkenness
+    @customer_1.increase_drunkenness(@drink2)
+    assert_equal(37, @customer_1.drunkenness())
+  end
+
+
 
 end

@@ -18,9 +18,22 @@ end
 
 
   def give_drink_to_customer
-    return drinks_in_pub.pop()
+    return @drinks_in_pub.pop()
   end
 
+  def check_age(customer)
+    if customer.age >= 18
+      return "PASS"
+    else
+      return "NO SALE"
+    end
+  end
+
+  def if_too_drunk(customer)
+    if customer.drunkenness >= 50
+      return "No service"
+    end
+  end
 
   #check customer age
 
