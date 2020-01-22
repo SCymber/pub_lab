@@ -12,4 +12,8 @@ end
     return @till
   end
 
+  def increase_money_in_till(amount)
+    @till += amount
+  end
+
 end

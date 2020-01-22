@@ -26,4 +26,9 @@ class PubTest < Minitest::Test
     assert_equal(150, @pub1.cash_in_till())
   end
 
+  def test_increase_money_in_till
+    @pub1.increase_money_in_till(5)
+    assert_equal(155, @pub1.cash_in_till())
+  end
+
 end
