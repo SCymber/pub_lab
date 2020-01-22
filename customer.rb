@@ -22,4 +22,11 @@ attr_accessor :drinks_bought
     @drinks_bought.push(drink)
   end
 
+  def buy_a_drink(pub)
+    drink = pub.give_drink_to_customer()
+    drinks_in_hand(drink)
+    decrease_wallet_total(drink.price)
+    pub.increase_money_in_till(drink.price)
+  end
+
 end
