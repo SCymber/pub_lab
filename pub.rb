@@ -16,4 +16,11 @@ end
     @till += amount
   end
 
+
+  #give drink to customer
+
+  #check customer age
+
+  
+
 end
